@@ -1,0 +1,25 @@
+<template>
+
+  <section aria-expanded.bind="expanded" role="group" class="expansion-panel mdc-elevation--z1 collapsed" tabindex="0">
+    <header class="expansion-panel-header" role="heading">
+      <h1 class="label">${label}</h1>
+      <p class="value">
+        <template replaceable part="expansion-panel-header-value"></template>
+      </p>
+      <div role="button" class="material-icons toggle-button" click.delegate="toggleExpansion()"></div>
+    </header>
+    <div class="expandable">
+      <section class="expansion-panel-body">
+        <div class="expansion-panel-content-left-spacer"></div>
+        <div class="expansion-panel-content">
+        <template replaceable part="expansion-panel-content"></template>
+        </div>
+        <div class="expansion-panel-content-rigth-spacer"></div>
+      </section>
+      <footer class="expansion-panel-footer hide">
+        <template replaceable part="expansion-panel-footer"></template>
+      </footer>
+    </div>
+  </section>
+
+</template>
